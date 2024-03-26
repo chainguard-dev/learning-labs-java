@@ -6,6 +6,7 @@ COPY src/ src/
 COPY pom.xml pom.xml
 
 RUN mvn clean package
+RUN REPOSITORY=$(mvn help:evaluate -Dexpression=settings.localRepository -q -DforceStdout) && rm -rf ${REPOSITORY}
 
 WORKDIR /app
 
