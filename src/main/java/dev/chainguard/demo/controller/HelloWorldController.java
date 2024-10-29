@@ -17,6 +17,6 @@ public class HelloWorldController {
     @GetMapping("/hello")
     public @ResponseBody ResponseEntity<String> hello() {
         return ResponseEntity.status(HttpStatus.OK)
-                .body("Hello, World!");
+                .body("Hello, World! I love Chainguard!");
     }
 }

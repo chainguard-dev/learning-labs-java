@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# Maven latest (Oct 26, 2024)
+docker pull docker.io/library/maven:latest@sha256:440a97a9304d5f66cb96e01161724d0ac3a50d1d90c4cb99dffd94fe4282d31f
+
+# CG Maven latest (Oct 26, 2024)
+docker pull cgr.dev/chainguard/maven@sha256:e72defd95ddd4b21a16099c69ca235f54e2b3db9ad17dc0d3f6b3b88137126b4
+
+# Temurin JRE 23 latest (Oct 26, 2024)
+docker pull docker.io/library/eclipse-temurin:23-jre@sha256:892bc93de848e69ba4669b0c1a4c7171ffe086211d90bee33ec3c332c3c52be6
+
+# CG JRE 23 latest-dev (Oct 26, 2024)
+docker pull cgr.dev/chainguard/jre@sha256:c0db719cd63b5e419d7b84b110823c5e21bca836772ac45fd5b3b5464f3481fb
+
+# CG JRE 23 latest (Oct 26, 2024)
+docker pull cgr.dev/chainguard/jre@sha256:43afe3cb7331f517eff19667939fb84c1e7aed283608e752007cfbbf9b4252d1

@@ -1,0 +1,23 @@
+# ----------------------------------------------------------------------------------------------------------------------
+# Chainguard maven@latest as of October 26, 2024
+# ----------------------------------------------------------------------------------------------------------------------
+FROM cgr.dev/chainguard/maven@sha256:e72defd95ddd4b21a16099c69ca235f54e2b3db9ad17dc0d3f6b3b88137126b4 AS builder
+
+WORKDIR /work
+
+COPY src/ src/
+COPY pom.xml pom.xml
+
+RUN mvn clean package
+RUN REPOSITORY=$(mvn help:evaluate -Dexpression=settings.localRepository -q -DforceStdout) && rm -rf ${REPOSITORY}
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Chainguard jre@latest as of October 26, 2024 (JDK 23)
+# ----------------------------------------------------------------------------------------------------------------------
+FROM cgr.dev/chainguard/jre@sha256:43afe3cb7331f517eff19667939fb84c1e7aed283608e752007cfbbf9b4252d1 AS runner
+
+WORKDIR /app
+
+COPY --from=builder /work/target/java-demo-app-1.0.0.jar .
+
+ENTRYPOINT ["java", "-jar", "java-demo-app-1.0.0.jar"]

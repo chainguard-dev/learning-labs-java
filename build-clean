@@ -1,0 +1,1 @@
+docker images -a | grep "java-demo-app" | awk '{print $1":"$2}' | xargs docker rmi

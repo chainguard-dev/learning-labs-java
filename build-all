@@ -1,0 +1,22 @@
+#/usr/bin/env bash
+
+./build-maven
+./build-maven-cg
+./build-maven-multistage
+./build-maven-multistage-cg
+
+echo
+docker images cgr.dev/chainguard/java-demo-app | sort
+echo
+
+imageTags="maven maven-cg maven-multistage maven-multistage-cg maven-multistage-cg-dev"
+
+for imageTag in ${imageTags}; do
+  docker scout quickview cgr.dev/chainguard/java-demo-app:${imageTag}
+done
+
+echo
+
+for imageTag in ${imageTags}; do
+  grype cgr.dev/chainguard/java-demo-app:${imageTag}
+done

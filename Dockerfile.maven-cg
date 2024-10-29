@@ -1,7 +1,7 @@
 # ----------------------------------------------------------------------------------------------------------------------
-# maven@latest as of October 26, 2024
+# Chainguard maven:latest as of October 26, 2024
 # ----------------------------------------------------------------------------------------------------------------------
-FROM docker.io/library/maven:latest@sha256:440a97a9304d5f66cb96e01161724d0ac3a50d1d90c4cb99dffd94fe4282d31f
+FROM cgr.dev/chainguard/maven@sha256:e72defd95ddd4b21a16099c69ca235f54e2b3db9ad17dc0d3f6b3b88137126b4
 
 WORKDIR /work
 
