@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+docker images maven:latest
+docker images cgr.dev/chainguard/maven:latest
+docker scout quickview maven:latest
+docker scout quickview cgr.dev/chainguard/maven:latest
+
+docker images node:latest
+docker images cgr.dev/chainguard/node:latest
+docker scout quickview node:latest
+docker scout quickview cgr.dev/chainguard/node:latest
+
+docker images ruby:latest
+docker images cgr.dev/chainguard/ruby:latest
+docker scout quickview ruby:latest
+docker scout quickview cgr.dev/chainguard/ruby:latest
+
+docker images golang:latest
+docker images cgr.dev/chainguard/go:latest
+docker scout quickview golang:latest
+docker scout quickview cgr.dev/chainguard/go:latest
+

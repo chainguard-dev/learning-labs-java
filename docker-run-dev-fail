@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+docker run --rm -it --entrypoint=sh cgr.dev/chainguard/java-demo-app:maven-multistage-cg

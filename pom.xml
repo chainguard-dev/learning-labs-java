@@ -46,10 +46,13 @@
                                 <architecture>arm64</architecture>
                             </platform>
                         </platforms>
+                        <!-- Normally you can just use latest or normal tags
                         <image>cgr.dev/chainguard/jre</image>
+                        -->
+                        <image>cgr.dev/chainguard/jre@sha256:43afe3cb7331f517eff19667939fb84c1e7aed283608e752007cfbbf9b4252d1</image>
                     </from>
                     <to>
-                        <image>java-demo-app:jib-cg</image>
+                        <image>cgr.dev/chainguard/java-demo-app:maven-jib</image>
                     </to>
                 </configuration>
             </plugin>
